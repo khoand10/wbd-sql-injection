@@ -21,7 +21,7 @@ public class LoginServlet extends HttpServlet {
             String password = request.getParameter("password");
 
             try {
-                Connection conn = ConnectionUtil.getConnection("localhost", "root", "123456", "webapp", "3306");
+                Connection conn = ConnectionUtil.getConnection("localhost", "root", "dangkhoa1997", "webapp", "3306");
                 Statement st = conn.createStatement();
                 String sql = "SELECT * FROM users WHERE username='" + username + "' AND password='" + password + "'";
                 System.out.println(sql);
